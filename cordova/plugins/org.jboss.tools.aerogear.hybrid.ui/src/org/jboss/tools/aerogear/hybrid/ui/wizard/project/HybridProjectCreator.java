@@ -32,7 +32,6 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.NullProgressMonitor;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.core.runtime.SubProgressMonitor;
-import org.eclipse.wst.jsdt.core.JavaScriptCore;
 import org.jboss.tools.aerogear.hybrid.core.natures.HybridAppNature;
 import org.jboss.tools.aerogear.hybrid.core.platform.PlatformConstants;
 import org.jboss.tools.aerogear.hybrid.core.util.FileUtils;
@@ -132,8 +131,8 @@ public class HybridProjectCreator {
 			natureList.add(HybridAppNature.NATURE_ID);
 		}
 		
-		if( !project.hasNature( JavaScriptCore.NATURE_ID )){
-			natureList.add(JavaScriptCore.NATURE_ID);
+		if( !project.hasNature( "org.eclipse.wst.jsdt.core.jsNature" )){
+			natureList.add("org.eclipse.wst.jsdt.core.jsNature");
 		}
 		
 	    description.setNatureIds(natureList.toArray(new String[natureList.size()]));
