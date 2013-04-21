@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            class="org.jboss.tools.aerogear.hybrid.cordovasim.ui.CordovaSimLaunchShortcut"
+            id="org.jboss.tools.aerogear.hybrid.cordovasim.launch"
+            label="Run with CordovaSim"
+            icon="icons/cordovasim_16.png"
+            modes="run">
+        <contextualLaunch>
+            <enablement>
+                <with variable="selection">
+                    <count value="1"/>
+                    <iterate>
+                        <adapt  type="org.eclipse.core.resources.IResource">
+                        <test property="org.eclipse.core.resources.projectNature" 
+                           value="org.jboss.tools.earogear.hybrid.core.HybridAppNature" />    
+                        </adapt> 
+                    </iterate>
+                </with>
+            </enablement>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+</plugin>

@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: org.jboss.tools.aerogear.hybrid.cordovasim.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.jboss.tools.aerogear.hybrid.cordovasim.ui.Plugin
+Bundle-Vendor: %Bundle-Vendor
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.ui;bundle-version="[3.8.0,4.0.0)",
+ org.jboss.tools.vpe.cordovasim.eclipse;bundle-version="3.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Import-Package: org.eclipse.ui.dialogs,
+ org.eclipse.ui.ide
